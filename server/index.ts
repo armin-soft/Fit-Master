@@ -72,11 +72,11 @@ app.use((req, res, next) => {
   // Use Vercel-provided port for dev/production
   const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000;
 
-  server.listen({
-    port: PORT,
-    host: "0.0.0.0",
-    reusePort: true
-  }, () => {
-    log(`Server running on port ${PORT}`);
-  });
+server.listen({
+  port: PORT,
+  host: "0.0.0.0",
+  reusePort: true,
+}, () => {
+  log(`Server running on port ${PORT}`);
+});
 })();
