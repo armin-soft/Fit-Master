@@ -1,0 +1,1 @@
+export { BMIDisplay } from './BMIDisplay';

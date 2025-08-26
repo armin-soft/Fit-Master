@@ -1,0 +1,445 @@
+
+/* تنظیمات پایه فول اسکرین */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html, body, #root {
+    @apply w-full h-full;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden !important;
+  }
+
+  /* تنظیمات جداول فول ریسپانسیو */
+  table {
+    direction: rtl;
+    @apply w-full border-collapse;
+    @apply text-xs sm:text-sm md:text-base lg:text-lg;
+    overflow-x: hidden;
+  }
+
+  th {
+    @apply font-semibold text-right border-b;
+    @apply p-0.5 sm:p-1 md:p-2 lg:p-3 xl:p-4;
+  }
+
+  td {
+    @apply border-b;
+    @apply p-0.5 sm:p-1 md:p-2 lg:p-3 xl:p-4;
+  }
+
+  /* تنظیمات کارت‌های فول ریسپانسیو */
+  .card {
+    @apply bg-card text-card-foreground border shadow-sm w-full h-full;
+    @apply rounded-sm xs:rounded sm:rounded-md md:rounded-lg lg:rounded-xl;
+  }
+
+  /* تنظیمات گرید و فلکس فول ریسپانسیو */
+  .grid {
+    @apply gap-0.5 xs:gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8;
+  }
+
+  .flex {
+    direction: rtl;
+  }
+
+  /* تنظیمات فاصله‌گذاری فول ریسپانسیو */
+  .section {
+    @apply py-1 xs:py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12;
+  }
+}
+
+@layer components {
+  /* کانتینرهای فول اسکرین */
+  .container {
+    @apply w-full h-full mx-auto;
+    @apply px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* کامپوننت‌های فول ریسپانسیو */
+  .responsive-container {
+    @apply container mx-auto w-full h-full;
+    @apply px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .responsive-grid {
+    @apply grid w-full h-full;
+    @apply gap-0.5 xs:gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8;
+  }
+
+  .responsive-flex {
+    @apply flex flex-col w-full h-full;
+  }
+
+  .responsive-flex-row {
+    @apply flex flex-col xs:flex-row w-full h-full;
+  }
+
+  /* تمام صفحه فول اسکرین */
+  .full-page {
+    @apply w-full h-screen;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .full-container {
+    @apply w-full h-full flex flex-col;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .full-content {
+    @apply flex-1 w-full overflow-y-auto;
+    overflow-x: hidden;
+  }
+
+  /* کلاس‌های اسکرول فول ریسپانسیو */
+  .scroll-container {
+    @apply w-full h-full overflow-y-auto;
+    overflow-x: hidden;
+  }
+
+  .scrollable {
+    @apply w-full h-full overflow-y-auto;
+    overflow-x: hidden;
+  }
+
+  /* ریسپانسیو تایپوگرافی فول */
+  .responsive-text-2xs {
+    @apply text-2xs xs:text-xs sm:text-sm md:text-base;
+  }
+
+  .responsive-text-xs {
+    @apply text-xs xs:text-sm sm:text-base md:text-lg;
+  }
+
+  .responsive-text-sm {
+    @apply text-sm xs:text-base sm:text-lg md:text-xl;
+  }
+
+  .responsive-text-base {
+    @apply text-base xs:text-lg sm:text-xl md:text-2xl;
+  }
+
+  .responsive-text-lg {
+    @apply text-lg xs:text-xl sm:text-2xl md:text-3xl;
+  }
+
+  .responsive-text-xl {
+    @apply text-xl xs:text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  .responsive-text-2xl {
+    @apply text-2xl xs:text-3xl sm:text-4xl md:text-5xl;
+  }
+
+  /* ریسپانسیو فاصله‌گذاری فول */
+  .responsive-p-xs {
+    @apply p-0.5 xs:p-1 sm:p-1.5 md:p-2 lg:p-3;
+  }
+
+  .responsive-p-sm {
+    @apply p-1 xs:p-1.5 sm:p-2 md:p-3 lg:p-4;
+  }
+
+  .responsive-p-md {
+    @apply p-1.5 xs:p-2 sm:p-3 md:p-4 lg:p-6;
+  }
+
+  .responsive-p-lg {
+    @apply p-2 xs:p-3 sm:p-4 md:p-6 lg:p-8;
+  }
+
+  .responsive-p-xl {
+    @apply p-3 xs:p-4 sm:p-6 md:p-8 lg:p-12;
+  }
+
+  .responsive-m-xs {
+    @apply m-0.5 xs:m-1 sm:m-1.5 md:m-2 lg:m-3;
+  }
+
+  .responsive-m-sm {
+    @apply m-1 xs:m-1.5 sm:m-2 md:m-3 lg:m-4;
+  }
+
+  .responsive-m-md {
+    @apply m-1.5 xs:m-2 sm:m-3 md:m-4 lg:m-6;
+  }
+
+  .responsive-m-lg {
+    @apply m-2 xs:m-3 sm:p-4 md:m-6 lg:m-8;
+  }
+
+  .responsive-m-xl {
+    @apply m-3 xs:m-4 sm:m-6 md:m-8 lg:m-12;
+  }
+
+  /* ریسپانسیو ارتفاع و عرض فول */
+  .responsive-h-xs {
+    @apply h-4 xs:h-5 sm:h-6 md:h-7 lg:h-8;
+  }
+
+  .responsive-h-sm {
+    @apply h-6 xs:h-7 sm:h-8 md:h-9 lg:h-10;
+  }
+
+  .responsive-h-md {
+    @apply h-8 xs:h-9 sm:h-10 md:h-12 lg:h-14;
+  }
+
+  .responsive-h-lg {
+    @apply h-10 xs:h-12 sm:h-14 md:h-16 lg:h-20;
+  }
+
+  .responsive-h-xl {
+    @apply h-12 xs:h-14 sm:h-16 md:h-20 lg:h-24;
+  }
+
+  .responsive-w-xs {
+    @apply w-4 xs:w-5 sm:w-6 md:w-7 lg:w-8;
+  }
+
+  .responsive-w-sm {
+    @apply w-6 xs:w-7 sm:w-8 md:w-9 lg:w-10;
+  }
+
+  .responsive-w-md {
+    @apply w-8 xs:w-9 sm:w-10 md:w-12 lg:w-14;
+  }
+
+  .responsive-w-lg {
+    @apply w-10 xs:w-12 sm:w-14 md:w-16 lg:w-20;
+  }
+
+  .responsive-w-xl {
+    @apply w-12 xs:w-14 sm:w-16 md:w-20 lg:w-24;
+  }
+
+  /* گرید‌های خاص فول ریسپانسیو */
+  .dashboard-grid {
+    @apply responsive-grid;
+    @apply grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6;
+  }
+
+  .cards-grid {
+    @apply responsive-grid;
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+
+  .stats-grid {
+    @apply responsive-grid;
+    @apply grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6;
+  }
+
+  /* سایدبار فول ریسپانسیو */
+  .sidebar-width {
+    @apply w-64 xs:w-72 sm:w-80 md:w-84 lg:w-96;
+  }
+
+  .mobile-sidebar-width {
+    @apply w-full xs:w-80 sm:w-84;
+  }
+
+  /* هدر فول ریسپانسیو */
+  .header-height {
+    @apply h-12 xs:h-14 sm:h-16 md:h-18 lg:h-20;
+  }
+
+  /* فوتر فول ریسپانسیو */
+  .footer-height {
+    @apply h-16 md:h-20 lg:h-24;
+  }
+}
+
+/* ریسپانسیو برای کلاس‌های خاص فول اسکرین */
+@layer utilities {
+  .text-responsive {
+    @apply text-2xs xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl;
+  }
+
+  .gap-responsive {
+    @apply gap-0.5 xs:gap-1 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-6;
+  }
+
+  .p-responsive {
+    @apply p-0.5 xs:p-1 sm:p-2 md:p-3 lg:p-4 xl:p-6;
+  }
+
+  .m-responsive {
+    @apply m-0.5 xs:m-1 sm:m-2 md:m-3 lg:m-4 xl:m-6;
+  }
+
+  .rounded-responsive {
+    @apply rounded xs:rounded-sm sm:rounded-md md:rounded-lg lg:rounded-xl;
+  }
+
+  .shadow-responsive {
+    @apply shadow-xs xs:shadow-sm sm:shadow md:shadow-lg lg:shadow-xl;
+  }
+
+  /* کلاس‌های کمکی برای اسکرول فول */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .scroll-auto {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .scroll-y-auto {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .scroll-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .scroll-full {
+    @apply w-full h-full overflow-y-auto;
+    overflow-x: hidden;
+  }
+
+  /* کلاس‌های فول اسکرین */
+  .full-screen {
+    @apply w-screen h-screen;
+    overflow-x: hidden;
+  }
+
+  .full-viewport {
+    @apply w-full h-full;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .full-container-absolute {
+    @apply absolute inset-0 w-full h-full;
+    overflow-x: hidden;
+  }
+
+  .full-container-fixed {
+    @apply fixed inset-0 w-full h-full;
+    overflow-x: hidden;
+  }
+
+  /* ریسپانسیو برای انیمیشن‌ها */
+  .animate-responsive {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-responsive:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  /* کلاس‌های مخصوص موبایل */
+  @media (max-width: 640px) {
+    .mobile-full {
+      @apply w-full h-full p-2;
+      overflow-x: hidden;
+    }
+    
+    .mobile-grid {
+      @apply grid-cols-1 gap-2;
+    }
+  }
+
+  /* کلاس‌های مخصوص تبلت */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .tablet-full {
+      @apply w-full h-full p-4;
+      overflow-x: hidden;
+    }
+    
+    .tablet-grid {
+      @apply grid-cols-2 gap-4;
+    }
+  }
+
+  /* کلاس‌های مخصوص دسکتاپ */
+  @media (min-width: 1025px) {
+    .desktop-full {
+      @apply w-full h-full p-6;
+      overflow-x: hidden;
+    }
+    
+    .desktop-grid {
+      @apply grid-cols-3 gap-6;
+    }
+  }
+
+  /* Custom height classes for h-18 */
+  .h-18 {
+    height: 4.5rem;
+  }
+  
+  @screen xs {
+    .xs\:h-18 {
+      height: 4.5rem;
+    }
+  }
+  
+  @screen sm {
+    .sm\:h-18 {
+      height: 4.5rem;
+    }
+  }
+  
+  @screen md {
+    .md\:h-18 {
+      height: 4.5rem;
+    }
+  }
+  
+  @screen lg {
+    .lg\:h-18 {
+      height: 4.5rem;
+    }
+  }
+  
+  @screen xl {
+    .xl\:h-18 {
+      height: 4.5rem;
+    }
+  }
+}
+
+/* ریسپانسیو برای کامپوننت‌های خاص */
+.page-container {
+  @apply w-full h-full flex flex-col;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.content-area {
+  @apply flex-1 w-full overflow-y-auto;
+  overflow-x: hidden;
+}
+
+.sidebar-container {
+  @apply h-full overflow-y-auto;
+  overflow-x: hidden;
+}
+
+.modal-container {
+  @apply w-full h-full flex items-center justify-center;
+  @apply p-2 sm:p-4 md:p-6 lg:p-8;
+  overflow-x: hidden;
+}
+
+.card-container {
+  @apply w-full h-full rounded-lg shadow-sm border bg-card;
+  @apply p-2 sm:p-3 md:p-4 lg:p-6;
+  overflow-x: hidden;
+}

@@ -1,0 +1,24 @@
+
+/* Media Queries برای اندازه‌های مختلف */
+
+/* برای دستگاه‌های بسیار کوچک */
+@media (max-width: 320px) {
+  .responsive-container {
+    @apply px-1 py-1;
+  }
+  
+  .responsive-text-xs {
+    @apply text-xs;
+  }
+}
+
+/* برای دستگاه‌های بسیار بزرگ */
+@media (min-width: 1920px) {
+  .responsive-container {
+    @apply px-12 py-12;
+  }
+  
+  .responsive-text-xl {
+    @apply text-5xl;
+  }
+}

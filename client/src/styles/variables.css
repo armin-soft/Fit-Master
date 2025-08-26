@@ -1,0 +1,110 @@
+
+/* متغیرهای CSS اصلی - هماهنگ با رنگ‌های اصلی پروژه */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 158 64% 52%; /* emerald-500 به عنوان رنگ اصلی */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 158 64% 52%; /* emerald-500 */
+    --radius: 0.75rem;
+    
+    /* Brand colors - هماهنگ با تم اصلی */
+    --brand-500: 158 64% 52%; /* emerald-500 */
+    --brand-600: 158 64% 47%; /* emerald-600 */
+    --brand-700: 158 64% 42%; /* emerald-700 */
+    --brand-400: 158 64% 57%; /* emerald-400 */
+    
+    /* Status colors - هماهنگ با پالت رنگ */
+    --success-500: 158 64% 52%; /* emerald-500 */
+    --success-600: 158 64% 47%; /* emerald-600 */
+    --warning-500: 24 100% 50%; /* orange-500 */
+    --warning-600: 24 100% 45%; /* orange-600 */
+    --info-500: 200 98% 39%; /* sky-500 */
+    --info-600: 200 98% 34%; /* sky-600 */
+    
+    /* Chart colors - استفاده از رنگ‌های هماهنگ */
+    --chart-1: 158 64% 52%;
+    --chart-2: 200 98% 39%;
+    --chart-3: 24 100% 50%;
+    --chart-4: 283 89% 74%;
+    --chart-5: 142 76% 36%;
+    
+    /* Sidebar colors - هماهنگ با تم */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 158 64% 52%;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 158 64% 52%; /* نگه داشتن رنگ اصلی یکسان */
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 158 64% 52%;
+    
+    /* Brand colors for dark mode */
+    --brand-500: 158 64% 52%; /* emerald-500 */
+    --brand-600: 158 64% 57%; /* emerald-400 in dark */
+    --brand-700: 158 64% 62%; /* emerald-300 in dark */
+    --brand-400: 158 64% 47%; /* emerald-600 in dark */
+    
+    /* Status colors for dark mode */
+    --success-500: 158 64% 52%; /* emerald-500 */
+    --success-600: 158 64% 57%; /* emerald-400 */
+    --warning-500: 24 100% 60%; /* orange-400 */
+    --warning-600: 24 100% 55%; /* orange-500 */
+    --info-500: 200 98% 60%; /* sky-400 */
+    --info-600: 200 98% 55%; /* sky-500 */
+    
+    /* Chart colors for dark mode */
+    --chart-1: 158 64% 52%;
+    --chart-2: 200 98% 60%;
+    --chart-3: 24 100% 60%;
+    --chart-4: 283 89% 80%;
+    --chart-5: 142 76% 50%;
+    
+    /* Sidebar colors for dark mode */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary-foreground: 220.9 39.3% 11%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 158 64% 52%;
+  }
+}

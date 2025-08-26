@@ -1,0 +1,149 @@
+
+{
+  "name": "فیت مستر",
+  "short_name": "فیت مستر",
+  "description": "برنامه جامع و هوشمند برای بدنسازان و علاقه‌مندان تناسب اندام که ترکیبی از برنامه تمرینی تخصصی، رژیم غذایی علمی، مکمل‌ها و ویتامین‌ها را زیر نظر مربی حرفه‌ای ارائه می‌دهد",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#10b981",
+  "theme_color": "#0ea5e9",
+  "version": "4.0.0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./Assets/Image/Icon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "./Assets/Image/Icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "./Assets/Image/Icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "داشبورد مدیریت",
+      "url": "./Management",
+      "description": "نمای کلی و آمار جامع سیستم",
+      "icons": []
+    },
+    {
+      "name": "پروفایل مربی",
+      "url": "./Management/Coach-Profile",
+      "description": "مدیریت اطلاعات شخصی و حرفه‌ای",
+      "icons": []
+    },
+    {
+      "name": "مدیریت شاگردان",
+      "url": "./Management/Students",
+      "description": "ثبت، ویرایش و پیگیری ورزشکاران",
+      "icons": []
+    },
+    {
+      "name": "حرکات تمرینی",
+      "url": "./Management/Exercise-Movements",
+      "description": "مدیریت کتابخانه تمرینات ورزشی",
+      "icons": []
+    },
+    {
+      "name": "برنامه غذایی",
+      "url": "./Management/Diet-Plan",
+      "description": "طراحی و مدیریت رژیم‌های تغذیه‌ای",
+      "icons": []
+    },
+    {
+      "name": "مکمل‌ها و ویتامین ‌ها",
+      "url": "./Management/Supplements-Vitamins",
+      "description": "مدیریت مکمل‌های ورزشی و تغذیه‌ای",
+      "icons": []
+    },
+    {
+      "name": "تاریخچه شاگردان",
+      "url": "./Management/Student-History",
+      "description": "پیگیری تاریخچه تغییرات شاگردان",
+      "icons": []
+    },
+    {
+      "name": "گزارشات و تحلیل‌ ها",
+      "url": "./Management/Report",
+      "description": "آمار و گزارشات جامع عملکرد",
+      "icons": []
+    },
+    {
+      "name": "پشتیبانی و ارتباط",
+      "url": "./Management/Support",
+      "description": "مدیریت پیام‌های شاگردان",
+      "icons": []
+    },
+    {
+      "name": "درباره پروژه",
+      "url": "./Management/About",
+      "description": "اطلاعات پروژه و توسعه‌دهنده",
+      "icons": []
+    },
+    {
+      "name": "داشبورد شاگرد",
+      "url": "./Student",
+      "description": "پنل اصلی و آمار شخصی شاگرد",
+      "icons": []
+    },
+    {
+      "name": "پروفایل شاگرد",
+      "url": "./Student/Profile",
+      "description": "مشاهده و ویرایش اطلاعات شخصی",
+      "icons": []
+    },
+    {
+      "name": "برنامه تمرینی شاگرد",
+      "url": "./Student/Exercise-Movements",
+      "description": "مشاهده حرکات و تمرینات اختصاصی",
+      "icons": []
+    },
+    {
+      "name": "برنامه غذایی شاگرد",
+      "url": "./Student/Diet-Plan",
+      "description": "رژیم غذایی و وعده‌های روزانه",
+      "icons": []
+    },
+    {
+      "name": "مکمل‌های شاگرد",
+      "url": "./Student/Supplements-Vitamins",
+      "description": "مکمل‌ها و ویتامین‌های تجویزی",
+      "icons": []
+    },
+    {
+      "name": "برنامه کامل شاگرد",
+      "url": "./Student/Program",
+      "description": "برنامه جامع تمرین، تغذیه و مکمل",
+      "icons": []
+    },
+    {
+      "name": "گزارشات شاگرد",
+      "url": "./Student/Report",
+      "description": "پیشرفت و آمار عملکرد شخصی",
+      "icons": []
+    },
+    {
+      "name": "پشتیبانی شاگرد",
+      "url": "./Student/Support",
+      "description": "ارتباط با مربی و دریافت راهنمایی",
+      "icons": []
+    },
+    {
+      "name": "درباره برنامه (شاگرد)",
+      "url": "./Student/About",
+      "description": "راهنمای استفاده از پنل شاگرد",
+      "icons": []
+    }
+  ]
+}
