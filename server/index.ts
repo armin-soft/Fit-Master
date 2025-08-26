@@ -7,23 +7,22 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
-// PostgreSQL session store - استفاده از دیتابیس آنلاین به جای memory store
+// PostgreSQL session store
 const PgSession = connectPgSimple(session);
 
-// Session configuration with PostgreSQL store
 app.use(session({
   store: new PgSession({
-    pool: pool, // استفاده از همان connection pool که برای دیتابیس اصلی استفاده می‌شود
-    tableName: 'session', // نام جدول برای ذخیره sessions
-    createTableIfMissing: true // ایجاد خودکار جدول در صورت عدم وجود
+    pool,
+    tableName: 'session',
+    createTableIfMissing: true
   }),
   secret: 'fit-master-session-secret-key-2024',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: false, // Set to true in production with HTTPS
+    secure: false,
     httpOnly: true,
-    maxAge: 2 * 60 * 60 * 1000 // 2 hours for security - shorter session timeout
+    maxAge: 2 * 60 * 60 * 1000
   }
 }));
 
@@ -45,14 +44,8 @@ app.use((req, res, next) => {
     const duration = Date.now() - start;
     if (path.startsWith("/api")) {
       let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
-      }
-
-      if (logLine.length > 80) {
-        logLine = logLine.slice(0, 79) + "…";
-      }
-
+      if (capturedJsonResponse) logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+      if (logLine.length > 80) logLine = logLine.slice(0, 79) + "…";
       log(logLine);
     }
   });
@@ -66,29 +59,24 @@ app.use((req, res, next) => {
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
-
     res.status(status).json({ message });
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
- const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000; // لوکال: 5000, Vercel: خودش اختصاص می‌ده
+  // Use Vercel-provided port for dev/production
+  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000;
 
-server.listen({
-  port: PORT,
-  host: "0.0.0.0",
-  reusePort: true,
-}, () => {
-  log(`serving on port ${PORT}`);
-});
+  server.listen({
+    port: PORT,
+    host: "0.0.0.0",
+    reusePort: true
+  }, () => {
+    log(`Server running on port ${PORT}`);
+  });
+})();
